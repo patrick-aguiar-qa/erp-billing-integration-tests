@@ -1,0 +1,39 @@
+{
+  "name": "erp-billing-integration-tests",
+  "version": "1.0.0",
+  "description": "Integration tests for a message-driven ERP billing worker: idempotency, retries, error classification and callback contracts",
+  "scripts": {
+    "test": "mocha",
+    "test:report": "mocha --reporter mochawesome",
+    "coverage": "c8 --include src --reporter text --reporter lcov --check-coverage --lines 95 --branches 85 --functions 95 mocha",
+    "test:ci": "c8 --include src --reporter text --reporter lcov --check-coverage --lines 95 --branches 85 --functions 95 mocha --reporter mochawesome"
+  },
+  "keywords": [
+    "qa",
+    "integration-testing",
+    "idempotency",
+    "message-queue",
+    "erp",
+    "mocha",
+    "supertest",
+    "chai",
+    "contract-testing"
+  ],
+  "author": "Patrick Aguiar",
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "c8": "^12.0.0",
+    "chai": "^6.3.0",
+    "mocha": "^12.0.3",
+    "mochawesome": "^8.1.1",
+    "supertest": "^7.3.2"
+  }
+}
